@@ -97,8 +97,8 @@ class Web extends Base
      * @param array $data
      * @return bool
      */
-    public function display($actionName, array $data = [])
+    public function display($tpl, array $parameters = [])
     {
-        return parent::display($actionName, array_merge($this->commonVars(), $data));
+        return parent::display($tpl, array_merge($this->commonVars(), $parameters));
     }
 }
