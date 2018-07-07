@@ -99,6 +99,9 @@ class Web extends Base
      */
     public function display($tpl, array $parameters = NULL)
     {
+        if ($parameters == NULL) {
+          $parameters = [];
+        }
         return parent::display($tpl, array_merge($this->commonVars(), $parameters));
     }
 }
